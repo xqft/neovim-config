@@ -7,5 +7,3 @@ vim.opt.relativenumber = true
 
 -- Highlights
 local highight = vim.api.nvim_set_hl
-
-
