@@ -73,6 +73,6 @@ settings =
 	}
 }
 
-catppuccin.setup(settings)
 vim.g.catppuccin_flavour = 'frappe'
-vim.cmd[[colorscheme catppuccin]]
+catppuccin.setup(settings)
+vim.cmd[[colorscheme tokyodark]]
