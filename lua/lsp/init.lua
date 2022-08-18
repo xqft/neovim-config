@@ -1,13 +1,14 @@
 -- cmp
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+local lsp_keymaps = require("../keymaps")
+
 require('lspconfig').html.setup{} -- html
-require('lspconfig').cssls.setup{
-capabilities = capabilities 
-} -- css
-require('lspconfig').denols.setup{
-capabilities = capabilities 
-} -- javascript/typescript
+require('lspconfig').cssls.setup{ capabilities = capabilities } -- css
+require('lspconfig').tsserver.setup{ 
+	capabilities = capabilities,
+	on_attach = lsp_keymaps.on_attach,
+}
 
 -- emmet
 capabilities.textDocument.completion.completionItem.snippetSupport = true
