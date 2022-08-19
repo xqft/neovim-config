@@ -22,6 +22,7 @@ opt.cursorline = true
 -- Other
 opt.backspace = 'indent,eol,start'
 opt.completeopt = 'menu,menuone,noselect'
+opt.updatetime = 100
 
 -- Highlights
 local highight = vim.api.nvim_set_hl
