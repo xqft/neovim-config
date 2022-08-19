@@ -23,4 +23,6 @@ require 'paq'
 	'kyazdani42/nvim-web-devicons';
 	'kyazdani42/nvim-tree.lua';
 	'akinsho/toggleterm.nvim';
+
+	{'turbio/bracey.vim', run='npm install --prefix server'};
 }
