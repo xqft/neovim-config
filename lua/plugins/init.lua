@@ -18,10 +18,13 @@ require 'paq'
 	'hrsh7th/nvim-cmp';
 	'hrsh7th/vim-vsnip';
 
+	'windwp/nvim-autopairs';
+
 	'junegunn/fzf';
 	'junegunn/fzf.vim';
 	'kyazdani42/nvim-web-devicons';
 	'kyazdani42/nvim-tree.lua';
+	'nyngwang/neoroot.lua';
 	'akinsho/toggleterm.nvim';
 
 	{'turbio/bracey.vim', run='npm install --prefix server'};

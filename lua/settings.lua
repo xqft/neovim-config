@@ -6,9 +6,9 @@ opt.relativenumber = true
 opt.numberwidth = 4
 
 -- Text
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 0
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
 
 opt.wrap = false
 

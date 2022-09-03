@@ -14,4 +14,15 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = true,
   },
+
+	update_cwd = true,
+	hijack_directories = {
+		enable = true,
+	},
+	diagnostics = {
+		enable = true,
+	},
+	update_focused_file = {
+		enable = true,
+	},
 })
