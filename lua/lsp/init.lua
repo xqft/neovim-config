@@ -1,18 +1,27 @@
+-- null-ls
+require('null-ls').setup()
 -- cmp
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-
+-- keymaps
 local lsp_keymaps = require("../keymaps")
+-- trouble
+require("trouble").setup{
+	auto_close = true,
+	use_diagnostic_signs = true,
+}
 
+require('mason').setup()
+require('mason-lspconfig').setup()
+
+-- webdev
 require('lspconfig').html.setup{} -- html
 require('lspconfig').cssls.setup{ capabilities = capabilities } -- css
 require('lspconfig').tsserver.setup{ 
 	capabilities = capabilities,
 	on_attach = lsp_keymaps.on_attach,
 }
-
 -- emmet
 capabilities.textDocument.completion.completionItem.snippetSupport = true
-
 require('lspconfig').emmet_ls.setup({
     -- on_attach = on_attach,
     capabilities = capabilities,
@@ -29,9 +38,3 @@ require('lspconfig').emmet_ls.setup({
 
 -- python
 require'lspconfig'.pylsp.setup{}
-
--- trouble
-require("trouble").setup{
-	auto_close = true,
-	use_diagnostic_signs = true,
-}

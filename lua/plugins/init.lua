@@ -1,50 +1,60 @@
-require 'paq'
-{
-	'savq/paq-nvim';
+return require('packer').startup(function(use)
+	use 'wbthomason/packer.nvim'
 
 	-- Dependencies
-	'nvim-lua/plenary.nvim';
+	use 'nvim-lua/plenary.nvim'
 
 	-- LaTeX
-	'lervag/vimtex';
+	use 'lervag/vimtex'
 
 	-- Style
-	'tiagovla/tokyodark.nvim';
-	'glacambre/firenvim';
-	{'catppuccin/nvim', as='catppuccin'};
-	'lukas-reineke/indent-blankline.nvim';
+	use 'tiagovla/tokyodark.nvim'
+	use 'glacambre/firenvim'
+	use { 'catppuccin/nvim', as='catppuccin'}
+	use 'lukas-reineke/indent-blankline.nvim'
 
 	-- Editor
-	'editorconfig/editorconfig-vim';
-	'windwp/nvim-autopairs';
-	'RRethy/vim-illuminate';
+	use 'editorconfig/editorconfig-vim'
+	use 'windwp/nvim-autopairs'
+	use 'RRethy/vim-illuminate'
 
 	-- LSP
-	'nvim-treesitter/nvim-treesitter';
-	'neovim/nvim-lspconfig';
-	'hrsh7th/cmp-nvim-lsp';
-	'hrsh7th/cmp-buffer';
-	'hrsh7th/cmp-path';
-	'hrsh7th/cmp-cmdline';
-	'hrsh7th/nvim-cmp';
-	'hrsh7th/vim-vsnip';
-	'folke/trouble.nvim';
-	'onsails/lspkind.nvim';
+	use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+	}
+
+	use 'jose-elias-alvarez/null-ls.nvim'
+
+	use 'nvim-treesitter/nvim-treesitter'
+
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+
+	use 'hrsh7th/vim-vsnip'
+
+	use 'folke/trouble.nvim'
+
+	use 'onsails/lspkind.nvim'
 
 	-- Git
-	'mhinz/vim-signify';
+	use 'mhinz/vim-signify'
 
 	-- Files
-	'junegunn/fzf';
-	'junegunn/fzf.vim';
-	'kyazdani42/nvim-web-devicons';
-	'kyazdani42/nvim-tree.lua';
-	'nyngwang/neoroot.lua';
+	use 'junegunn/fzf'
+	use 'junegunn/fzf.vim'
+	use 'kyazdani42/nvim-web-devicons'
+	use 'kyazdani42/nvim-tree.lua'
+	use 'nyngwang/neoroot.lua'
 
 	-- Terminal
-	'akinsho/toggleterm.nvim';
+	use 'akinsho/toggleterm.nvim'
 
 	-- Other
-	{'turbio/bracey.vim', run='npm install --prefix server'};
-	'folke/which-key.nvim';
-}
+	use {'turbio/bracey.vim', run='npm install --prefix server'}
+	use 'folke/which-key.nvim'
+end)
