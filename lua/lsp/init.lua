@@ -37,4 +37,14 @@ require('lspconfig').emmet_ls.setup({
 })
 
 -- python
-require'lspconfig'.pylsp.setup{}
+require'lspconfig'.pylsp.setup{
+	settings = {
+		pylsp = {
+			plugins = {
+				flake8 = {
+					enable = true,
+				}
+			}
+		}
+	}
+}
