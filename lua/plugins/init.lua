@@ -46,4 +46,5 @@ require 'paq'
 
 	-- Other
 	{'turbio/bracey.vim', run='npm install --prefix server'};
+	'folke/which-key.nvim';
 }
